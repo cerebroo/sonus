@@ -18,7 +18,9 @@ class SonusServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('closca/sonus');
+        $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('sonus.php')
+        ], 'config');
 	}
 
 	/**
@@ -33,15 +35,4 @@ class SonusServiceProvider extends ServiceProvider {
             return new Sonus;
         });
 	}
-
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array('sonus');
-	}
-
 }
