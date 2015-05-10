@@ -24,8 +24,8 @@
         "classmap": [
             "src/migrations"
         ],
-        "psr-0": {
-            "Closca\\Sonus\\": "src/"
+        "psr-4": {
+            "Closca\\Sonus\\": "src/Closca/Sonus/"
         }
     },
     "minimum-stability": "dev"
